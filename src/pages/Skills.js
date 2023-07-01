@@ -22,9 +22,7 @@ const Skills = (props) => {
     <div className='skills'>
       {skills.map((skill) => (
         <div key={skill.language} className='skill-set'>
-          <h3>{skill.language}</h3>
-          <p>Knowledge: {skill.knowledge}</p>
-          <p>Has Done: {skill.hasDone}</p>
+          <SkillSet language = {skill.language} knowledge = {skill.knowledge} hasDone = {skill.hasDone}/>
         </div>
       ))}
     </div>

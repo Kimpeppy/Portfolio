@@ -3,8 +3,7 @@ import { Card, ListGroup } from 'react-bootstrap';
 import Graph from '../components/Graph';
 import CardText from '../components/CardText';
 
-const SkillSet = ({ skill }) => {
-  const { language, knowledge, hasDone } = skill;
+const SkillSet = ({ knowledge, language, hasDone }) => {
 
   return (
     <div>
