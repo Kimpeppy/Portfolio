@@ -1,26 +1,32 @@
 import React, { Component } from 'react';
 import {useState, useEffect} from 'react';
-import {Card, ListGroup} from 'react-bootstrap';
-import Graph from '../components/Graph';
-import CardText from '../components/CardText';
+import SkillSet from '../components/SkillSet';
 
 const Skills = (props) => {
   const [skills, setSkills] = useState([]);
+
+  useEffect(() => {
+    const getSkills = async() => {
+      const skillsFromServer = await fetchSkills()
+      setSkills(skillsFromServer)
+    }
+    getSkills()
+  }, []) 
+
+  const fetchSkills = async() => {
+    const res = await fetch('http://localhost:5000/skills')
+    const data = await res.json()
+    return data
+  }
   return (
     <div className='skills'>
-      <Card style={{ width: '18rem' }}>
-        <ListGroup variant="flush">
-          <ListGroup.Item>
-              <Graph percent="70%"/>
-          </ListGroup.Item>
-          <ListGroup.Item className='cards' text= "Python">
-            <CardText text="Python"/>
-          </ListGroup.Item>
-          <ListGroup.Item className='cards'>
-            <CardText text= "Used in Artificial Intelligence Projects"/>
-          </ListGroup.Item>
-        </ListGroup>
-      </Card>
+      {skills.map((skill) => (
+        <div key={skill.language} className='skill-set'>
+          <h3>{skill.language}</h3>
+          <p>Knowledge: {skill.knowledge}</p>
+          <p>Has Done: {skill.hasDone}</p>
+        </div>
+      ))}
     </div>
   )
 }
