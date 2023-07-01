@@ -1,0 +1,14 @@
+{
+  "skills": [
+    {
+      "language": "python",
+      "knowledge": 70,
+      "hasDone": "Build some artificial intelligence projects"
+    },
+    {
+      "language": "java",
+      "knowledge": 70,
+      "hasDone": "Build some data structures projects"
+    }
+  ]
+}
