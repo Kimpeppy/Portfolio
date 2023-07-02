@@ -23,8 +23,11 @@ h2 {
 .center-graph {
     text-align:center;
     position:absolute;
-    top: 45%;
-    right: 45%
+    top: 40%;
+    right: 33%;
+    font-weight: bold;
+    font-size: 40px;
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
 }
 
 .cards {
@@ -35,8 +38,12 @@ h2 {
 }
 
 .skills {
-    margin: auto;
     width: 50%;
     padding: 10px;
-  
+    display: flex;
+    flex-direction: row;
+}
+
+.skill-set {
+    padding: 20px;
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {useState, useEffect} from 'react';
+import {Container} from 'react-bootstrap'
 import SkillSet from '../components/SkillSet';
 
 const Skills = (props) => {
@@ -21,9 +22,11 @@ const Skills = (props) => {
   return (
     <div className='skills'>
       {skills.map((skill) => (
-        <div key={skill.language} className='skill-set'>
-          <SkillSet language = {skill.language} knowledge = {skill.knowledge} hasDone = {skill.hasDone}/>
-        </div>
+        <Container>
+          <div key={skill.language} className='skill-set'>
+            <SkillSet language = {skill.language} knowledge = {skill.knowledge} hasDone = {skill.hasDone} />
+          </div>
+        </Container>
       ))}
     </div>
   )

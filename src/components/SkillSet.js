@@ -7,7 +7,7 @@ const SkillSet = ({ knowledge, language, hasDone }) => {
 
   return (
     <div>
-      <Card style={{ width: '18rem' }}>
+      <Card style={{ width: '18rem'}}>
         <ListGroup variant="flush">
           <ListGroup.Item>
             <Graph percent={knowledge} />

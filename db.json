@@ -8,7 +8,17 @@
     {
       "language": "java",
       "knowledge": 70,
-      "hasDone": "Build some data structures projects"
+      "hasDone": "Build some data structures projects that replicate algorithms"
+    },
+    {
+      "language": "C++",
+      "knowledge": 50,
+      "hasDone": "Build some Object-Oriented Programming projects"
+    },
+    {
+      "language": "Javascript",
+      "knowledge": 30,
+      "hasDone": "Build some websites in react like this portfolio"
     }
   ]
 }
